@@ -1,0 +1,29 @@
+<h1>Create a new game</h1>
+
+<form [formGroup]="newGameForm" (ngSubmit)="onSubmit(newGameForm.value)">
+  <div class="form-group">
+    <label class="control-label" for="maxPlayers">Max number of players:</label>
+    <input class="form-control" id="maxPlayers" type="number" placeholder="20" formControlName="maxPlayers">
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="maxBingos">Max number of bingo's:</label>
+    <input class="form-control" id="maxBingos" type="number" value="50" formControlName="maxBingos">
+  </div>
+  <div class="form-group">
+    <label class="control-group" for="maxBoards">Max number of boards per player:</label>
+    <input class="form-control" id="maxBoards" type="number" value="5" formControlName="maxBoards">
+  </div>
+  <div class="form-group">
+    <label class="control-group" for="name">Give your bingo game a nickname:</label>
+    <input class="form-control" id="name" type="text" formControlName="name">
+  </div>
+  <div class="form-group">
+    <label class="control-group" for="isPrivate">Private game:</label>
+    <input class="form-control" id="isPrivate" type="checkbox" value="unchecked" formControlName="isPrivate">
+  </div>
+  <div class="form-group">
+    <label class="control-group" for="password">Password for private game:</label>
+    <input class="form-control" id="password" type="password" formControlName="password">
+  </div>
+  <button class="btn btn-success" type="submit" >Create new game!</button>
+</form>
